@@ -69,7 +69,7 @@ public class Main{
 //		}
 //	}
 
-		String para = "I am a Developer";
-		para.split(" ");
+//		String para = "I am a Developer";
+//		para.split(" ");
 	}
 }
