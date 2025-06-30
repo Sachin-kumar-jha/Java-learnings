@@ -1,5 +1,9 @@
 package first_project;
-import java.util.Scanner;
+
+
+// import java.util.Scanner;
+
+
 public class Launch {
 
 	@SuppressWarnings("resource")
@@ -228,10 +232,7 @@ Methods of stringBuffer:
 =>All methods of string included here
 
 ==> (In SingleThreaded Env we use StringBuilder)
-*/	
-
-
-		
+*/		
 		}
 
 }

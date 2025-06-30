@@ -1,6 +1,8 @@
 package com.start;
 
-import com.oneClassMultipleThreadPractice.Tabel;
+import com.datatbase.Database1;
+import com.datatbase.Database2;
+//import com.oneClassMultipleThreadPractice.Tabel;
 
 //import MultiThreadingUsingRunnableinterface.MultiThreadwithRunnable;
 //import MultiThreadingUsingRunnableinterface.multithreadusingRunnableEx2;
@@ -12,7 +14,7 @@ import com.oneClassMultipleThreadPractice.Tabel;
 
 public class Launch {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 //oneClassoneThreadExample
 //		Seven seven=new Seven();
 //		Five five=new Five();
@@ -46,7 +48,7 @@ public class Launch {
 //class create thread using extends thread class it has not access to extends other 
 //for overcome this problem we use Runnable interface implementation
 	
-*/
+
 		
 // For oneClassMultipleThread using Runnable implementation;//
 	  
@@ -80,6 +82,44 @@ Runnable Example below for oneclassOneThread
 		t1.start();
 		t2.start();
 */	
+		
+//If we want to two thread run simultaneously after that run third one then we use join with thread like that
+// t1.join();
+// t2.join();
+
+//Example of join method and threadPriority
+
+Database1 database1 = new Database1();
+Database2 database2 = new Database2();
+
+database1.start();
+database2.start();
+//Here we want to serialize after both database logic done after read start so here we use Join to 
+////perform pause of main thread 
+System.out.println(database1.getPriority());
+System.out.println(database2.getPriority());
+database1.setPriority(Thread.MAX_PRIORITY);
+database2.setPriority(Thread.NORM_PRIORITY);
+
+database1.join(); 
+database2.join();
+
+//Here database1 and 2 both are finished then the current thread is run.
+
+
+//Main thread called by threadScheduler first
+process(database1.collect,database2.collect);
+
+}
+	
+	private static void process(String collect1[],String collect2[]) {
+		for(String d:collect1) {
+			System.out.println(d);
+		}
+		
+		for(String d:collect2) {
+			System.out.println(d);
+		}
 	}
 
 }
