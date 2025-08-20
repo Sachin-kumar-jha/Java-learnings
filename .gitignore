@@ -1,0 +1,33 @@
+# Java compiled files
+*.class
+Portfolio-java
+Servers
+# Ignore Eclipse workspace metadata
+.metadata/
+
+# Eclipse specific project files
+.project
+.classpath
+.settings/
+
+# Eclipse build folders
+bin/
+tmp/
+
+# Package outputs
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backup and temp files
+*.bak
+*.tmp
+*~
