@@ -1,8 +1,12 @@
 package com.start;
 
+import com.PracticeOneClassOneThreadExample.Five;
+import com.PracticeOneClassOneThreadExample.Seven;
+//import com.datatbase.Database1;
+//import com.datatbase.Database2;
+//import com.oneClassMultipleThreadPractice.Tabel;
 import com.datatbase.Database1;
 import com.datatbase.Database2;
-//import com.oneClassMultipleThreadPractice.Tabel;
 
 //import MultiThreadingUsingRunnableinterface.MultiThreadwithRunnable;
 //import MultiThreadingUsingRunnableinterface.multithreadusingRunnableEx2;
@@ -16,15 +20,15 @@ public class Launch {
 
 	public static void main(String[] args) throws InterruptedException {
 //oneClassoneThreadExample
-//		Seven seven=new Seven();
-//		Five five=new Five();
+		Seven seven=new Seven();
+		Five five=new Five();
 
 //Which thread class object created first this is registered first by the ThreadScheduler
 //And run randomly by os.
-//		
+////		
 //		five.setName("Thread raju");
 //		seven.setName("Thread kaju");
-		
+//		
 //		seven.start();//Thread created and Registered by threadScheduler
 //		five.start();//Thread created and Registered
 
@@ -94,24 +98,25 @@ Database2 database2 = new Database2();
 
 database1.start();
 database2.start();
-//Here we want to serialize after both database logic done after read start so here we use Join to 
-////perform pause of main thread 
-System.out.println(database1.getPriority());
-System.out.println(database2.getPriority());
-database1.setPriority(Thread.MAX_PRIORITY);
-database2.setPriority(Thread.NORM_PRIORITY);
-
+////Here we want to serialize after both database logic done after read start so here we use Join to 
+//////perform pause of main thread 
+//System.out.println(database1.getPriority());
+//System.out.println(database2.getPriority());
+//database1.setPriority(Thread.MAX_PRIORITY);
+//database2.setPriority(Thread.NORM_PRIORITY);
+//
 database1.join(); 
 database2.join();
-
-//Here database1 and 2 both are finished then the current thread is run.
-
-
-//Main thread called by threadScheduler first
+//
+////Here database1 and 2 both are finished then the current thread is run.
+//
+//
+////Main thread called by threadScheduler first
 process(database1.collect,database2.collect);
-
+//
 }
-	
+//	
+	@SuppressWarnings("unused")
 	private static void process(String collect1[],String collect2[]) {
 		for(String d:collect1) {
 			System.out.println(d);

@@ -2,6 +2,13 @@ package com.abstractClass;
 
 //public abstract class PaymentGateway {
 //
+//
+//	public PaymentGateway(int salary) {
+//		super();
+//		System.out.println("Salary"+salary);
+//		
+//	}
+//
 //	public void show() {
 //		System.out.println("Hello");
 //	}

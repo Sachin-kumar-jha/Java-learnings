@@ -18,5 +18,15 @@ public class CreateOwnException extends Exception{
 	 * 
 	 */
 	
-
+	public static void createException() {
+		int age =17;
+		if(age<18) {
+			try {
+				throw new ClassNotFoundException("Invalid age");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
 }

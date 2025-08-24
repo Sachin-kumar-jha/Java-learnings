@@ -97,7 +97,8 @@ public class Launch {
 //		
 //	System.out.println(newStr);
         
-        /**     
+   /**   
+         *   
  Contains Method
  String.contains("substr");
  
@@ -199,7 +200,7 @@ String name="raju";
      
      System.out.println(stringbuffer); //Mohanraju1
      
-   //2.StringBuilder class: non synchronized:multithreading
+   //2.StringBuilder class: non synchronized: used in single threaded environment
    StringBuilder stringbuilder=new StringBuilder("Mohan");
      
      stringbuilder.append("raju");

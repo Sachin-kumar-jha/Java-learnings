@@ -21,6 +21,7 @@ public interface InterfacePrac {
   //public abstract void abc(); //Here abstract keyword is optional without this keyword it is also an abstract method
    public void abc();//This valid for abstract method
    public void bcd();
+
    //Here is not any body so here memory space is not given
    //So here an interface never create an instance or object of an interface.
    //This is blueprint for class not for object.
